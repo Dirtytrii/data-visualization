@@ -35,6 +35,8 @@ fig = px.scatter(
     width=800,
     height=800,
     title='全球地震散点图',
+    # this size here can achieve print the color stepwise,
+    # and also show the massage(size,and value of size) if we choose the point
     size='震级',
     size_max=10,
 )
