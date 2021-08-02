@@ -1,7 +1,7 @@
 import plotly.express as px
 import json
 
-filename = 'data/eq_data_30_day_m1.json'
+filename = 'data/eq_data_1_day_m1.json'
 with open(filename)as f:
     all_ep_data = json.load(f)
 
@@ -30,5 +30,5 @@ fig = px.scatter(
     title='全球地震散点图'
 )
 
-fig.write_html('createFile/global_earthquakes_30_days.html')
+fig.write_html('createFile/global_earthquakes_1_days.html')
 fig.show()
