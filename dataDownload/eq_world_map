@@ -2,7 +2,7 @@ import plotly.express as px
 import json
 import pandas as pd
 
-filename = 'data/eq_data_1_day_m1.json'
+filename = 'data/eq_data_30_day_m1.json'
 with open(filename)as f:
     all_ep_data = json.load(f)
 
@@ -35,11 +35,14 @@ fig = px.scatter(
     width=800,
     height=800,
     title='全球地震散点图',
-    # this size here can achieve print the color stepwise,
+    # this size here can achieve print the point stepwise,
     # and also show the massage(size,and value of size) if we choose the point
+    # the color and achieve print the color of point stepwise by {color}
     size='震级',
     size_max=10,
+    color='震级',
+    hover_name='位置',
 )
 
-fig.write_html('createFile/global_earthquakes_with_pandas.html')
+fig.write_html('createFile/global_earthquakes_30days_with_pandas.html')
 fig.show()
